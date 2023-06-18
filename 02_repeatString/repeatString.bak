@@ -1,0 +1,31 @@
+const repeatString = function () {
+
+    const number = Math.floor(Math.random() * 1000);
+    const stringChoice = "hey";
+    outputString = '';
+    const numArray = [3, 10, 1, 0, -1, number];
+    const outputArray = [];
+    let revolutions = numArray.length-1;
+
+    let i = 0;
+    while (i < revolutions) {
+        repetitionRevolution();
+        outputString = '';
+        return outputArray[i];    
+        i++;
+    };
+
+    // Creates output Array elements from each numArray element
+    function repetitionRevolution() {
+        instance = numArray[i];
+        for (let n = instance; n > 0; --n) {
+            outputString += stringChoice;
+        };
+        return outputArray.push(outputString);
+    };
+
+};
+
+// Do not edit below this line
+module.exports = repeatString;
+
