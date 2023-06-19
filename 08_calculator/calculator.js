@@ -38,8 +38,18 @@ let array = [];
     return outputProduct;
 };
 
-const factorial = function() {
-	
+const factorial = function(n) {
+	let array = [];
+  if (n === 0) {
+    return 1;
+  } else {
+    for (i=0;i<n;i++) {
+      array.push(n);
+      n--;
+    }
+    return array;
+  }
+
 };
 
 // Do not edit below this line
