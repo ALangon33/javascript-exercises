@@ -6,11 +6,13 @@ const fibonacci = function (n) {
     let nextValue = 0;
 
     if (typeof (n) === 'string') {
-        Number(n);
+        n = Number(n);
     };
 
     if (n === 1 || n === 2) {
         return 1;
+    } else if (n < 0) {
+        return "OOPS";
     } else {
         for (i=2; i<n; i++) {
             nextValue = currentValue + oldestValue;
