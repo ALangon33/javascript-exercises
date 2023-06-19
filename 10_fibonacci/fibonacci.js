@@ -14,6 +14,7 @@ const fibonacci = function (n) {
     } else {
         for (i=2; i<n; i++) {
             nextValue = currentValue + oldestValue;
+            oldestValue = currentValue;
             currentValue = nextValue;
         };
     };
