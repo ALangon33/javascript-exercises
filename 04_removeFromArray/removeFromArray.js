@@ -1,37 +1,9 @@
-const removeFromArray = function (array, valuesToRemove) {
+const removeFromArray = function (array, args) {
 
-    // Assign arguments from input to variables
-    const args = Array.from(arguments);
-    const subjectArray = args[0];
-    const removalArray = args.slice(1);
-
-    let removalLen;
-    // Get length for loop
-    let subjectLen = subjectArray.length;
-    if (typeof (removalArray) === 'number') {
-        removalLen = 1;
-    } else {
-        removalLen = removalArray.length;
-    }
-    const output = [];
-    let o = 0;
-
-
-    for (i = 0; i < subjectLen;) {
-        for (n = 0; n < removalLen; n++) {
-            if (subjectArray[i] !== removalArray[n]) {
-                output[o] = subjectArray[i];
-                o++;
-                i++
-            } else if (subjectArray[i] === removalArray[n]) {
-                i++;
-            } else {
-                i++
-            };
-        };
-    };
-    return output;
-
+    const argSet = Array.from(arguments)
+    const subjectArgs = argSet[0];
+    const arg = argSet.slice(1);
+    return subjectArgs.filter(x => !arg.includes(x));
 };
 
 // Do not edit below this line

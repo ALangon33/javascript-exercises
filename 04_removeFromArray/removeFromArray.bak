@@ -1,0 +1,44 @@
+const removeFromArray = function (array, valuesToRemove) {
+
+    // Assign arguments from input to variables
+    const args = Array.from(arguments);
+    const subjectArray = args[0].sort();
+    const removalArray = args.slice(1).sort();
+
+    let removalLen;
+    // Get length for loop
+    let subjectLen = subjectArray.length;
+    if (typeof (removalArray) === 'number') {
+        removalLen = 1;
+    } else {
+        removalLen = removalArray.length;
+    }
+    const output = [];
+    let o = 0;
+    i = 0;
+    n = 0;
+
+    for (i=0; i < subjectLen;) {
+        for (n=0; n < removalLen;) {
+            if (subjectArray[i] !== removalArray[n] && typeof(removalArray[n] === 'number')) {
+                output[o] = subjectArray[i];
+                o++;
+                i++;
+                n++;
+            } else if (subjectArray[i] !== removalArray[n]) {
+                output[o] = subjectArray[i];
+                o++;
+            } else if (subjectArray[i] === removalArray[n] && typeof(removalArray[n]) === 'string') {
+                i++;
+            } else {
+                i++;
+                n++;
+            };
+        };
+    };
+    return output;
+
+};
+
+// Do not edit below this line
+module.exports = removeFromArray;
