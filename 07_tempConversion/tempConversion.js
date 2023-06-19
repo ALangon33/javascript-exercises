@@ -3,7 +3,7 @@ const convertToCelsius = function (fahrenheitTemp) {
   if (fahrenheitTemp === 32) {
     return output;
   } else {
-    return output.toFixed(1);
+    return Number(output.toFixed(1));
   };
 };
 
@@ -12,7 +12,7 @@ const convertToFahrenheit = function (celsiusTemp) {
   if (celsiusTemp === 0) {
     return output;
   } else {
-    return output.toFixed(1);
+    return Number(output.toFixed(1));
   };
 };
 
