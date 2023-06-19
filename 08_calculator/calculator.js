@@ -25,8 +25,17 @@ const multiply = function(args) {
   return outputProduct;
 };
 
-const power = function() {
-	
+const power = function(x, y) {
+let array = [];
+  for (i=0;i<y;i++) {
+    array.push(x);
+  }
+    let output = 1;
+    const outputProduct = array.reduce(
+        (accumulator, currentValue) => accumulator * currentValue,
+        output
+    );
+    return outputProduct;
 };
 
 const factorial = function() {
