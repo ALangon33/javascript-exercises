@@ -1,9 +1,11 @@
 const leapYears = function(x) {
 
     // if modulous 400 return true
-    if (x % 400) {
+    if (x % 400 === 0 ) {
         return true;
-    } else if (x % 4 && !(x % 100)) {
+    } else if (x % 100 === 0) {
+        return false;
+    } else if (x % 4 === 0) {
         return true;
     } else {
         return false;
