@@ -2,12 +2,17 @@ const add = function(x, y) {
 	return x + y;
 };
 
-const subtract = function() {
-	
+const subtract = function(x, y) {
+	return x - y;
 };
 
-const sum = function() {
-	
+const sum = function(array) {
+  let output = 0;
+  const outputSum = array.reduce(
+      (accumulator, currentValue) => accumulator + currentValue,
+      output
+  );
+  return outputSum;
 };
 
 const multiply = function() {
