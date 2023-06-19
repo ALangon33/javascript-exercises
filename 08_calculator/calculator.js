@@ -40,14 +40,21 @@ let array = [];
 
 const factorial = function(n) {
 	let array = [];
-  if (n === 0) {
+  if (n === 0 || n === 1) {
     return 1;
+  } else if (n === 2) {
+    return 2;
   } else {
-    for (i=0;i<n;i++) {
+    for (i=n;i>0;i--) {
       array.push(n);
       n--;
     }
-    return array;
+    let output = 1;
+    const outputProduct = array.reduce(
+        (accumulator, currentValue) => accumulator * currentValue,
+        output
+    );
+    return outputProduct;
   }
 
 };
